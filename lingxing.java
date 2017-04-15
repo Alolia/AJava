@@ -1,10 +1,14 @@
 package net;
 
+import java.util.Scanner;
+
 public class lingxing {
 
 	public static void main(String args[] ) {
-		
-		int width = 5;
+		System.out.println("请输入菱形的边长");
+		Scanner input =new Scanner(System.in);
+		int no =input.nextInt();
+		int width = no;
 		
 		int start = 0;
 		int end = 0;
@@ -29,8 +33,8 @@ public class lingxing {
 		}
 		
 		
-		for(int i=width-1;i>=0;i--){
-			start = width-1 -i;
+		for(int i=width-2;i>-1;i--){
+			start = width-i-1;
 			end = start + i*2;
 			for(int j=0;j<=end;j++){
 				if(j==start){
